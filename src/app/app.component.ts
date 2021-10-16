@@ -25,6 +25,10 @@ export class AppComponent {
     this.router.navigateByUrl('/actores');
   }
 
+  navigateSignup(){
+    this.router.navigateByUrl('/signup')
+  }
+
   navigateLogin(){
     this.router.navigateByUrl('/login');
   }

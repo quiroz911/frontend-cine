@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
+  selector: 'app-signup',
+  templateUrl: './signup.component.html',
   styles: [
+
   ]
 })
-export class LoginComponent implements OnInit {
-
+export class SignupComponent implements OnInit{
   newForm!: FormGroup;
 
   hide = true;
@@ -31,4 +31,5 @@ export class LoginComponent implements OnInit {
 
     return this.newForm.controls.email.hasError('email') ? 'Not a valid email' : '';
   }
+
 }

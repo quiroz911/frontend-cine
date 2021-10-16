@@ -6,6 +6,9 @@ import { HomeComponent } from './home/home.component';
 
 import { ActoresComponent } from './actores/actores.component';
 import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
+import { MaterialModule } from '../material/material.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,11 +16,14 @@ import { LoginComponent } from './login/login.component';
     HomeComponent,
    
     ActoresComponent,
-        LoginComponent
+        LoginComponent,
+        SignupComponent
   ],
   imports: [
     CommonModule,
-    PagesRoutingModule
+    PagesRoutingModule,
+    MaterialModule,
+    ReactiveFormsModule
   ]
 })
 export class PagesModule { }
