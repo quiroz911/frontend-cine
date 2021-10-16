@@ -1,1 +1,17 @@
-<p>cartelera works!</p>
+<mat-drawer-container style="height:100%;" autosize>
+    <div class="container">
+        <div class="row">
+            <div class="col-4" *ngFor="let pelicula of peliculas">
+                <mat-card class="mt-3">
+                    <mat-card-header>
+                      <div mat-card-avatar></div>
+                      <mat-card-title>{{pelicula.titulo}}</mat-card-title>
+                      <mat-card-subtitle>Fecha Estreno: {{pelicula.fechaEstreno}}</mat-card-subtitle>
+                    </mat-card-header>
+                    <img mat-card-image src="{{pelicula.poster}}">
+                </mat-card>   
+            </div>
+        </div>
+    </div>
+
+</mat-drawer-container>

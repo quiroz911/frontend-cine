@@ -26,9 +26,13 @@ export class LoginComponent implements OnInit {
 
   getErrorMessage() {
     if (this.newForm.controls.email.hasError('required')) {
-      return 'You must enter a value';
+      return 'Debes ingresar un valor';
     }
 
-    return this.newForm.controls.email.hasError('email') ? 'Not a valid email' : '';
+    return this.newForm.controls.email.hasError('email') ? 'Email Inválido' : '';
+  }
+
+  cleanFields(){
+    this.newForm.reset();
   }
 }

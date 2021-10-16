@@ -9,15 +9,17 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { MaterialModule } from '../material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CarteleraComponent } from './cartelera/cartelera.component';
 
 
 @NgModule({
   declarations: [
     HomeComponent,
-   
+
     ActoresComponent,
-        LoginComponent,
-        SignupComponent
+    LoginComponent,
+    SignupComponent,
+    CarteleraComponent
   ],
   imports: [
     CommonModule,
