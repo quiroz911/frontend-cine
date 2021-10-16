@@ -1,1 +1,27 @@
-<h1>Hola Mundo</h1>
+<mat-toolbar>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <button mat-mini-fab color="primary" (click)="navigateHome()">
+                    <mat-icon>home</mat-icon>
+                </button>
+            </div>
+            <div class="col">
+                <button mat-raised-button color="primary" (click)="navigateCartelera()">
+                    Cartelera
+                </button>
+            </div>
+            <div class="col">
+                <button mat-raised-button color="primary" (click)="navigateActores()">
+                    Actores
+                </button>
+            </div>
+            <div class="col">
+                <button mat-raised-button color="warn" (click)="navigateLogin()">
+                    Login
+                </button>
+            </div>
+        </div>
+    </div>
+</mat-toolbar>
+<router-outlet></router-outlet>
