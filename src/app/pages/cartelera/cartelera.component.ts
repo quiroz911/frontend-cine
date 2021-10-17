@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { pelicula } from 'src/app/interfaces/interfaces';
+import { CarteleraService } from '../../services/cartelera.service';
 
 @Component({
   selector: 'app-cartelera',
@@ -11,17 +13,20 @@ export class CarteleraComponent implements OnInit {
 
   peliculas!: pelicula[];
 
-  constructor() {
-    this.peliculas = [{
-      id: 1,
-      titulo: 'Avengers Endgame',
-      enCines: true,
-      fechaEstreno: '2019',
-      poster: 'https://quepeliculaver.info/wp-content/uploads/2020/05/avengers-endgame-190-poster-scaled.jpg'
-    }]
+  constructor(private carteleraService:CarteleraService, private router: Router) {
+    
   }
 
   ngOnInit(): void {
+    this.carteleraService.getPeliculasList()
+      .subscribe(data=>{
+        this.peliculas=data;
+      })
+  }
+
+  navigateInfoPelicula(idmovie:string){
+    this.carteleraService.selectedMovieId=idmovie;
+    this.router.navigateByUrl('/cartelera/infoPelicula')
   }
 
 }

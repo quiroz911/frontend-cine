@@ -1,0 +1,6 @@
+{
+    "/api": {
+      "target": "https://arquisoftcinema.azurewebsites.net",
+      "secure": false
+    }
+  }

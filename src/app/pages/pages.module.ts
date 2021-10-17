@@ -10,6 +10,7 @@ import { SignupComponent } from './signup/signup.component';
 import { MaterialModule } from '../material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CarteleraComponent } from './cartelera/cartelera.component';
+import { InfoPeliculaComponent } from './info-pelicula/info-pelicula.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { CarteleraComponent } from './cartelera/cartelera.component';
     ActoresComponent,
     LoginComponent,
     SignupComponent,
-    CarteleraComponent
+    CarteleraComponent,
+    InfoPeliculaComponent
   ],
   imports: [
     CommonModule,
