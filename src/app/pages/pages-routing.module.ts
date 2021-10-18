@@ -3,9 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { CarteleraComponent } from './cartelera/cartelera.component';
 import { ActoresComponent } from './actores/actores.component';
-import { LoginComponent } from './login/login.component';
-import { SignupComponent } from './signup/signup.component';
 import { InfoPeliculaComponent } from './info-pelicula/info-pelicula.component';
+import { RegistroActorComponent } from './registro-actor/registro-actor.component';
+import { EscribirReviewComponent } from './escribir-review/escribir-review.component';
 
 const routes: Routes = [
   {
@@ -16,16 +16,15 @@ const routes: Routes = [
     children:[
       {path: '', component: CarteleraComponent},
       {path: 'infoPelicula', component: InfoPeliculaComponent },
+      {path: 'escribirReview', component: EscribirReviewComponent}
     ]
   },
   {
-    path: 'actores', component: ActoresComponent
-  },
-  {
-    path: 'signup', component: SignupComponent
-  },
-  {
-    path: 'login', component: LoginComponent
+    path: 'actores', 
+    children:[
+      {path: '', component: ActoresComponent},
+      {path: 'registrar', component: RegistroActorComponent}
+    ]
   },
   {
     path:'**', redirectTo:'home'

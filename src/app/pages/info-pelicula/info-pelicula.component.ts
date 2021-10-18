@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CarteleraService } from '../../services/cartelera.service';
-import { pelicula } from '../../interfaces/interfaces';
+import { pelicula, review } from '../../interfaces/interfaces';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-info-pelicula',
@@ -12,9 +13,11 @@ export class InfoPeliculaComponent implements OnInit {
 
   idMovie:string="";
   pelicula!: pelicula;
-  enCinesMap = {'true': 'Sí', 'false':'No'}
+  enCinesMap = {'true': 'Sí', 'false':'No'};
+  reviews!:review[];
 
-  constructor(private carteleraService:CarteleraService) { 
+
+  constructor(private carteleraService:CarteleraService, private router:Router) { 
    
   }
 
@@ -24,6 +27,10 @@ export class InfoPeliculaComponent implements OnInit {
     .subscribe(data=>{
       this.pelicula = data;
     }) 
+  }
+
+  navigateEscribirReview(){
+    this.router.navigateByUrl('/cartelera/escribirReview')
   }
 
 }

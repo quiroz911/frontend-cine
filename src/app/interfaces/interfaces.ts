@@ -26,3 +26,11 @@ export interface salaDeCine{
     nombre: string,
     peliculas: pelicula[],
 }
+
+export interface review{
+    id: string;
+    idPelicula:string;
+    nombre:string;
+    calificacion:number;
+    descripcion:string;
+}

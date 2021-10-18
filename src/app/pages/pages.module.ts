@@ -5,12 +5,13 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { HomeComponent } from './home/home.component';
 
 import { ActoresComponent } from './actores/actores.component';
-import { LoginComponent } from './login/login.component';
-import { SignupComponent } from './signup/signup.component';
+
 import { MaterialModule } from '../material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CarteleraComponent } from './cartelera/cartelera.component';
 import { InfoPeliculaComponent } from './info-pelicula/info-pelicula.component';
+import { RegistroActorComponent } from './registro-actor/registro-actor.component';
+import { EscribirReviewComponent } from './escribir-review/escribir-review.component';
 
 
 @NgModule({
@@ -18,10 +19,11 @@ import { InfoPeliculaComponent } from './info-pelicula/info-pelicula.component';
     HomeComponent,
 
     ActoresComponent,
-    LoginComponent,
-    SignupComponent,
+    
     CarteleraComponent,
-    InfoPeliculaComponent
+    InfoPeliculaComponent,
+    RegistroActorComponent,
+    EscribirReviewComponent
   ],
   imports: [
     CommonModule,

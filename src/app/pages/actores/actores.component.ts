@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { actor } from 'src/app/interfaces/interfaces';
 import { ActoresService } from '../../services/actores.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-actores',
@@ -12,7 +13,7 @@ export class ActoresComponent implements OnInit {
 
   actores!:actor[];
 
-  constructor(private actoresService: ActoresService) { 
+  constructor(private actoresService: ActoresService, private router: Router) { 
    
   }
 
@@ -21,6 +22,10 @@ export class ActoresComponent implements OnInit {
       .subscribe(data=>{
         this.actores = data;
       })
+  }
+
+  navigateRegistroActor(){
+    this.router.navigateByUrl('/actores/registrar')
   }
 
 }

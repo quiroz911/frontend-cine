@@ -1,0 +1,50 @@
+<mat-drawer-container style="height:100%;" autosize>
+    <div class="container mt-4">
+        <h1>Escriba una Review para: {{nombrePelicula}}</h1>
+        <mat-divider></mat-divider>
+
+        <form [formGroup]="formGroup">
+            <div class="row">
+                <div class="col-6 mt-3">
+                    <h2>Ingrese su nombre</h2>
+                </div>
+                <div class="col-6 mt-3">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Nombre</mat-label>
+                        <input matInput placeholder="Juan Carlos" formControlName="name">
+                      </mat-form-field>
+                </div>
+
+                <div class="col-6">
+                    <h2>Ingrese la calificación</h2>
+                </div>
+                <div class="col-6">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Calificación</mat-label>
+                        <mat-select>
+                          <mat-option *ngFor="let calificacion of calificaciones" [value]="calificacion.value">
+                            {{calificacion.viewValue}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                </div>
+
+                <div class="col-6">
+                    <h2>Ingrese su review</h2>
+                </div>
+                <div class="col-6" style="size-adjust:inherit;">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Escriba su review</mat-label>
+                        <textarea matInput formControlName="description"></textarea>
+                    </mat-form-field>
+                </div>
+
+                <div class="col-12">
+                    <button mat-raised-button color="accent" (click)="submitReview()">
+                        Guardar
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</mat-drawer-container>
