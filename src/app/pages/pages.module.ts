@@ -12,6 +12,7 @@ import { CarteleraComponent } from './cartelera/cartelera.component';
 import { InfoPeliculaComponent } from './info-pelicula/info-pelicula.component';
 import { RegistroActorComponent } from './registro-actor/registro-actor.component';
 import { EscribirReviewComponent } from './escribir-review/escribir-review.component';
+import { RegistrarPeliculaComponent } from './registrar-pelicula/registrar-pelicula.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { EscribirReviewComponent } from './escribir-review/escribir-review.compo
     CarteleraComponent,
     InfoPeliculaComponent,
     RegistroActorComponent,
-    EscribirReviewComponent
+    EscribirReviewComponent,
+    RegistrarPeliculaComponent
   ],
   imports: [
     CommonModule,

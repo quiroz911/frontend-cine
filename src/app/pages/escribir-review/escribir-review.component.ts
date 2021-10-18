@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CarteleraService } from '../../services/cartelera.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { review } from 'src/app/interfaces/interfaces';
+import { Router } from '@angular/router';
 
 interface calificacion{
   value: number;
@@ -27,10 +29,11 @@ export class EscribirReviewComponent implements OnInit {
     {value: 5, viewValue: "5 Estrella"},
   ]
 
-  constructor(private carteleraService:CarteleraService, private fb: FormBuilder) { 
+  constructor(private carteleraService:CarteleraService, private fb: FormBuilder, private router:Router) { 
     this.formGroup = this.fb.group({
       name: ['', [Validators.required]],
-      description: ['', [Validators.required]]
+      description: ['', [Validators.required]],
+      calification: ['', [Validators.required]]
     })
   }
 
@@ -42,6 +45,14 @@ export class EscribirReviewComponent implements OnInit {
   }
 
   submitReview(){
-
+    let reviewToPost:review = {
+      idPelicula: this.carteleraService.selectedMovieId,
+      nombre: this.formGroup.controls['name'].value,
+      descripcion: this.formGroup.controls['description'].value,
+      calificacion: this.formGroup.controls['calification'].value,
+    }
+    this.carteleraService.postReviewByPelicula(reviewToPost)
+    .subscribe(p=>{console.log});
+    this.router.navigateByUrl('/cartelera');
   }
 }

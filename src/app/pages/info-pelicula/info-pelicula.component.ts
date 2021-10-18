@@ -26,7 +26,11 @@ export class InfoPeliculaComponent implements OnInit {
     this.carteleraService.getPeliculaById(this.idMovie)
     .subscribe(data=>{
       this.pelicula = data;
-    }) 
+    })
+    this.carteleraService.getReviewsByPeliculaId(this.idMovie)
+    .subscribe(reviews=>{
+      this.reviews = reviews;
+    })
   }
 
   navigateEscribirReview(){

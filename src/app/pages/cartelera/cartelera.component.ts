@@ -29,4 +29,8 @@ export class CarteleraComponent implements OnInit {
     this.router.navigateByUrl('/cartelera/infoPelicula')
   }
 
+  nagivateRegistrarPelicula(){
+    this.router.navigateByUrl('/cartelera/registrarPelicula');
+  }
+
 }

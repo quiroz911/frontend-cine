@@ -21,7 +21,7 @@
                 <div class="col-6">
                     <mat-form-field appearance="fill">
                         <mat-label>Calificación</mat-label>
-                        <mat-select>
+                        <mat-select formControlName="calification">
                           <mat-option *ngFor="let calificacion of calificaciones" [value]="calificacion.value">
                             {{calificacion.viewValue}}
                           </mat-option>

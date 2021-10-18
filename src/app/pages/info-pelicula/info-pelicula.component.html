@@ -7,7 +7,7 @@
     </div>
     <div class="row">
       <div class="col-6">
-        <img src="{{ pelicula.poster }}" alt="" />
+        <img src="{{ pelicula.poster }}" alt=""  style="height: 400px; width: 300px;"/>
       </div>
       <div class="col-6">
         <div class="container">
@@ -37,14 +37,6 @@
               </h3>
             </div>
 
-            <div class="col-6">
-              <h2>Generos:</h2>
-            </div>
-            <div class="col-6">
-              <h3 *ngFor="let genero of pelicula.generos">
-                {{ genero.nombre }},
-              </h3>
-            </div>
 
             <button mat-raised-button color="accent" (click)="navigateEscribirReview()">Escribir Review</button>
 
@@ -61,11 +53,11 @@
     <div class="container" *ngFor="let review of reviews">
       <div class="row">
         <div class="col-12 mt-4">
-          <h3>{{ review.nombre }}</h3>
+          <h2>{{ review.nombre }}</h2>
         </div>
 
         <div class="col-12">
-          <h2>Calificación: {{ review.calificacion}} Estrellas</h2>
+          <h4>Calificación: {{ review.calificacion}} Estrellas</h4>
         </div>
 
         <div class="col-12 mt-2">

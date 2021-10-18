@@ -6,6 +6,7 @@ import { ActoresComponent } from './actores/actores.component';
 import { InfoPeliculaComponent } from './info-pelicula/info-pelicula.component';
 import { RegistroActorComponent } from './registro-actor/registro-actor.component';
 import { EscribirReviewComponent } from './escribir-review/escribir-review.component';
+import { RegistrarPeliculaComponent } from './registrar-pelicula/registrar-pelicula.component';
 
 const routes: Routes = [
   {
@@ -16,7 +17,8 @@ const routes: Routes = [
     children:[
       {path: '', component: CarteleraComponent},
       {path: 'infoPelicula', component: InfoPeliculaComponent },
-      {path: 'escribirReview', component: EscribirReviewComponent}
+      {path: 'escribirReview', component: EscribirReviewComponent},
+      {path: 'registrarPelicula', component: RegistrarPeliculaComponent}
     ]
   },
   {
