@@ -34,3 +34,8 @@ export interface review{
     calificacion:number;
     descripcion:string;
 }
+
+export interface funcion{
+  id:string;
+  fecha: string
+}
